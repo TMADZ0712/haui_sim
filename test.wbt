@@ -1,0 +1,597 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Parquetry.proto"
+
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation 0.19442479869225232 -0.8084571195133614 -0.5555142514478233 5.545442953977739
+  position -6.600556372549747 -2.151820938710723 4.200613397128292
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 4 4
+  floorTileSize 4 4
+  floorAppearance Parquetry {
+    type "light strip"
+  }
+  wallThickness 0.02
+  wallHeight 0.05
+}
+Solid {
+  translation -1 0 0.001
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 2 4 0.002
+      }
+    }
+  ]
+  name "red_floor"
+}
+Solid {
+  translation 1 0 0.001
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 2 4 0.002
+      }
+    }
+  ]
+  name "blue_floor"
+}
+Solid {
+  translation -1.75 1.75 0.001
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.5 0.5 0.003
+      }
+    }
+  ]
+  name "cornerR"
+}
+Solid {
+  translation 1.75 1.75 0.001
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.5 0.5 0.003
+      }
+    }
+  ]
+  name "cornerB"
+}
+Solid {
+  translation 0.25 1.75 0.001
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.5 0.5 0.003
+      }
+    }
+  ]
+  name "cornerMid1"
+}
+Solid {
+  translation -0.25 1.75 0.001
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.5 0.5 0.003
+      }
+    }
+  ]
+  name "cornerMid2"
+}
+Solid {
+  translation -0.35 1.77 0.049803799999999995
+  rotation -0.02410677645604304 0.010044490186705566 0.9996589276077054 5.305466397671264e-16
+  children [
+    DEF box Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  name "box(1)"
+  boundingObject USE box
+  physics Physics {
+  }
+  linearVelocity -2.8265141067527272e-18 -1.1072980695818194e-17 9.181136769322236e-17
+  angularVelocity 6.661338147750837e-17 6.661338147750107e-17 2.0464345081442454e-17
+}
+Solid {
+  translation -1.67 -1.72 0
+  name "solid(1)"
+}
+Solid {
+  translation -1.67 -1.72 0.03683348522461598
+  children [
+    DEF sphere Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        metalness 0
+      }
+      geometry Sphere {
+        radius 0.037
+      }
+    }
+  ]
+  name "solid(2)"
+  boundingObject USE sphere
+  physics Physics {
+  }
+  linearVelocity 0 0 2.0030625519643408e-14
+}
+Solid {
+  translation 0 0 0.001
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 4 0.004
+      }
+    }
+  ]
+  name "middle line"
+}
+Solid {
+  translation -1.75 -1.75 0.001
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.5 0.5 0.003
+      }
+    }
+  ]
+  name "cornerR2"
+}
+Solid {
+  translation 1.75 -1.75 0.001
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.5 0.5 0.003
+      }
+    }
+  ]
+  name "cornerB2"
+}
+Group {
+  children [
+    Pose {
+      translation 0 1 0.003
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 2 0.015 0.002
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -1 0.003
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 2 0.015 0.002
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -1 0 0.003
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.015 2 0.002
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 1 0 0.003
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.015 2 0.002
+          }
+        }
+      ]
+    }
+  ]
+}
+Group {
+  children [
+    Pose {
+      translation 0 0.25 0.003
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.5 0.015 0.002
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0 -0.25 0.003
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.5 0.015 0.002
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -0.25 0 0.003
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.015 0.5 0.002
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.25 0 0.003
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.015 0.5 0.002
+          }
+        }
+      ]
+    }
+  ]
+}
+Solid {
+  children [
+    Group {
+      children [
+        Pose {
+          translation 0 0.25 0.25
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 0.5 0.015 0.5
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 0 -0.25 0.25
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 0.5 0.015 0.5
+              }
+            }
+          ]
+        }
+        Pose {
+          translation -0.25 0 0.25
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 0.015 0.5 0.5
+              }
+            }
+          ]
+        }
+        Pose {
+          translation 0.25 0 0.25
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0 0
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 0.015 0.5 0.5
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  boundingObject Group {
+    children [
+      Pose {
+        translation 0 0.25 0.25
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0 0 0
+              roughness 1
+              metalness 0
+            }
+            geometry Box {
+              size 0.5 0.015 0.5
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0 -0.25 0.25
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0 0 0
+              roughness 1
+              metalness 0
+            }
+            geometry Box {
+              size 0.5 0.015 0.5
+            }
+          }
+        ]
+      }
+      Pose {
+        translation -0.25 0 0.25
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0 0 0
+              roughness 1
+              metalness 0
+            }
+            geometry Box {
+              size 0.015 0.5 0.5
+            }
+          }
+        ]
+      }
+      Pose {
+        translation 0.25 0 0.25
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0 0 0
+              roughness 1
+              metalness 0
+            }
+            geometry Box {
+              size 0.015 0.5 0.5
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
+Group {
+  children [
+    Pose {
+      translation 0.75 0.5 0.003
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.5 0.015 0.002
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.5 0.75 0.003
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.015 0.5 0.002
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -0.75 0.5 0.003
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.5 0.015 0.002
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -0.5 0.75 0.003
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.015 0.5 0.002
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.75 -0.5 0.003
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.5 0.015 0.002
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.5 -0.75 0.003
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.015 0.5 0.002
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -0.75 -0.5 0.003
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.5 0.015 0.002
+          }
+        }
+      ]
+    }
+    Pose {
+      translation -0.5 -0.75 0.003
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.015 0.5 0.002
+          }
+        }
+      ]
+    }
+  ]
+}
