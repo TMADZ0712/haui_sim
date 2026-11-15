@@ -9,8 +9,8 @@ WorldInfo {
   basicTimeStep 16
 }
 Viewpoint {
-  orientation 0.19442479869225232 -0.8084571195133614 -0.5555142514478233 5.545442953977739
-  position -6.600556372549747 -2.151820938710723 4.200613397128292
+  orientation 0.24854849812747054 -0.1035036154553877 -0.9630735411515791 3.9614346789885375
+  position 1.4112609723647926 -1.8263936887130119 1.492145642862066
 }
 TexturedBackground {
 }
@@ -120,8 +120,8 @@ Solid {
   name "cornerMid2"
 }
 Solid {
-  translation -0.35 1.77 0.049803799999999995
-  rotation -0.02410677645604304 0.010044490186705566 0.9996589276077054 5.305466397671264e-16
+  translation -0.35 1.77 0.04980380000000003
+  rotation 0.055902423316140155 -0.03993030237236491 0.9976374541985855 5.338372315716376e-16
   children [
     DEF box Shape {
       appearance PBRAppearance {
@@ -137,15 +137,15 @@ Solid {
   boundingObject USE box
   physics Physics {
   }
-  linearVelocity -2.8265141067527272e-18 -1.1072980695818194e-17 9.181136769322236e-17
-  angularVelocity 6.661338147750837e-17 6.661338147750107e-17 2.0464345081442454e-17
+  linearVelocity -3.822537297294729e-18 2.050672882578341e-17 -4.548412585487642e-16
+  angularVelocity -1.9984014443252826e-16 -2.664535259100376e-16 3.462812191747163e-17
 }
 Solid {
   translation -1.67 -1.72 0
   name "solid(1)"
 }
 Solid {
-  translation -1.67 -1.72 0.03683348522461598
+  translation -1.67 -1.72 0.036833485224617275
   children [
     DEF sphere Shape {
       appearance PBRAppearance {
@@ -161,7 +161,7 @@ Solid {
   boundingObject USE sphere
   physics Physics {
   }
-  linearVelocity 0 0 2.0030625519643408e-14
+  linearVelocity 0 0 -3.3496761401779726e-16
 }
 Solid {
   translation 0 0 0.001
@@ -340,6 +340,7 @@ Group {
   ]
 }
 Solid {
+  translation 0 0 -0.72
   children [
     Group {
       children [
@@ -470,6 +471,186 @@ Solid {
       }
     ]
   }
+}
+Robot {
+  translation 7.805050551638509e-08 7.415483299377051e-06 0.06901432414960373
+  rotation -0.9999442596194015 0.010558109953739618 6.299533237350753e-05 0.00010591305127755681
+  children [
+    DEF robo Shape {
+      appearance PBRAppearance {
+        metalness 0
+      }
+      geometry Box {
+        size 0.4 0.4 0.05
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -5.239453315653009e-11
+        axis 1 0 0
+        anchor -0.23 0.14 -0.02
+      }
+      device [
+        RotationalMotor {
+          name "FL"
+        }
+      ]
+      endPoint Solid {
+        translation -0.23 0.14 -0.02
+        rotation 9.054869198170689e-13 -1 -1.4675154737671564e-12 1.5707953072319243
+        children [
+          Shape {
+            appearance PBRAppearance {
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.06
+              radius 0.05
+            }
+          }
+        ]
+        name "FL"
+        boundingObject Shape {
+          appearance PBRAppearance {
+          }
+          geometry Cylinder {
+            height 0.06
+            radius 0.05
+          }
+        }
+        physics Physics {
+        }
+        linearVelocity -7.251643215399472e-09 -2.5094862602791516e-09 9.235719578953697e-09
+        angularVelocity -5.055813442487512e-10 9.844441698545789e-09 3.5344495354936747e-08
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -4.8697046395318466e-11
+        axis 1 0 0
+        anchor -0.23 -0.14 -0.02
+      }
+      device [
+        RotationalMotor {
+          name "BL"
+        }
+      ]
+      endPoint Solid {
+        translation -0.23 -0.14 -0.02
+        rotation 4.238075547604523e-13 -1 -9.85479259305551e-13 1.57079530722826
+        children [
+          Shape {
+            appearance PBRAppearance {
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.06
+              radius 0.05
+            }
+          }
+        ]
+        name "BL"
+        boundingObject Shape {
+          appearance PBRAppearance {
+          }
+          geometry Cylinder {
+            height 0.06
+            radius 0.05
+          }
+        }
+        physics Physics {
+        }
+        linearVelocity -4.101026042210181e-09 -2.4235858787648545e-09 9.451133758835186e-09
+        angularVelocity -5.012877625240724e-10 1.0173772692180656e-08 3.53444962820655e-08
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -1.6062864638399788e-07
+        axis 1 0 0
+        anchor 0.23 0.14 -0.02
+      }
+      device [
+        RotationalMotor {
+          name "FR"
+        }
+      ]
+      endPoint Solid {
+        translation 0.23 0.14 -0.02
+        rotation 0 -1 0 1.5707954678082325
+        children [
+          Shape {
+            appearance PBRAppearance {
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.06
+              radius 0.05
+            }
+          }
+        ]
+        name "FR"
+        boundingObject Shape {
+          appearance PBRAppearance {
+          }
+          geometry Cylinder {
+            height 0.06
+            radius 0.05
+          }
+        }
+        physics Physics {
+        }
+        linearVelocity -6.232190612969625e-08 2.340723846980568e-09 4.431095201074636e-09
+        angularVelocity -1.078856323902178e-09 -1.5880829559832678e-06 3.51320640761341e-08
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position -4.866770502314709e-11
+        axis 1 0 0
+        anchor 0.23 -0.14 -0.02
+      }
+      device [
+        RotationalMotor {
+          name "BR"
+        }
+      ]
+      endPoint Solid {
+        translation 0.23 -0.14 -0.02
+        rotation 0 -1 0 1.5707953072282537
+        children [
+          Shape {
+            appearance PBRAppearance {
+              metalness 0
+            }
+            geometry Cylinder {
+              height 0.06
+              radius 0.05
+            }
+          }
+        ]
+        name "BR"
+        boundingObject Shape {
+          appearance PBRAppearance {
+          }
+          geometry Cylinder {
+            height 0.06
+            radius 0.05
+          }
+        }
+        physics Physics {
+        }
+        linearVelocity -4.100720280853083e-09 2.7494077261214204e-09 4.635938042615985e-09
+        angularVelocity -1.057024265694637e-09 1.0170163097979832e-08 3.534449784995411e-08
+      }
+    }
+  ]
+  boundingObject USE robo
+  physics Physics {
+  }
+  controller "test"
+  linearVelocity -1.9264025037254465e-08 5.478340350865722e-11 6.845896811252299e-09
+  angularVelocity -7.853495613586583e-10 1.068403536427402e-08 3.541533731742378e-08
 }
 Group {
   children [
